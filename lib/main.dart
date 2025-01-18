@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taskit/login.dart';
+import 'package:taskit/login_or_Register.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,10 +14,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // useMaterial3: false,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         primarySwatch: Colors.blue,
         fontFamily: 'Poppins',
       ),
-      home: Login(),
+      home: Login_or_Register(),
     );
   }
 }

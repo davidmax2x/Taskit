@@ -16,12 +16,13 @@ class Form_tf extends StatelessWidget {
       obscureText: obscureText,
       controller: controller,
       decoration: InputDecoration(
+        contentPadding: const EdgeInsets.all(20),
         hintText: hint,
         hintStyle: const TextStyle(
           fontWeight: FontWeight.w600,
         ),
         border: const OutlineInputBorder(
-          gapPadding: 5,
+          gapPadding: 20,
           borderRadius: BorderRadius.all(
             Radius.circular(5),
           ),
