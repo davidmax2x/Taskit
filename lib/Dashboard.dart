@@ -13,7 +13,6 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true,
       bottomNavigationBar: BottomNavyBar(
           showElevation: false,
           itemPadding: const EdgeInsets.symmetric(horizontal: 10),
