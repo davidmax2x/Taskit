@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:taskit/Pages/login.dart';
-import 'package:taskit/Pages/register.dart';
+import 'package:taskit/onboarding/login.dart';
+import 'package:taskit/onboarding/register.dart';
 
 class Login_or_Register extends StatefulWidget {
   const Login_or_Register({Key? key}) : super(key: key);

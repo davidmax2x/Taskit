@@ -15,6 +15,7 @@ dependencies:
   lucide_icons_flutter: ^1.2.5
   gap: ^3.0.1
   bottom_navy_bar: ^6.1.0
+  anim_search_bar: ^2.0.3
 
 dev_dependencies:
   flutter_test:

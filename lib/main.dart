@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskit/edit_pages/Edit_nootes.dart';
 import 'package:taskit/login_or_Register.dart';
 
 void main() => runApp(const MyApp());
@@ -10,6 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        '/login': (context) => const Login_or_Register(),
+        '/addNote':(context)=>  EditNotesPage(),
+      },
       title: _title,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

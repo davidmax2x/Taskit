@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "anim_search_bar",
+      "rootUri": "file:///C:/Users/MAX/AppData/Local/Pub/Cache/hosted/pub.dev/anim_search_bar-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "async",
       "rootUri": "file:///C:/Users/MAX/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0",
       "packageUri": "lib/",
@@ -200,7 +206,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2025-01-21T07:49:00.619263Z",
+  "generated": "2025-01-21T09:48:57.648706Z",
   "generator": "pub",
   "generatorVersion": "3.6.1",
   "flutterRoot": "file:///C:/Users/MAX/Desktop/flutter_windows_3.22.1-stable/flutter",
