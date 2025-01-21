@@ -1,6 +1,5 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 class Dashboard extends StatefulWidget {
@@ -26,7 +25,7 @@ class _DashboardState extends State<Dashboard> {
               activeColor: Colors.black,
               inactiveColor: Colors.grey,
               icon: const Icon(LucideIcons.notepadText),
-              title: Text(
+              title: const Text(
                 'Notes',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -38,7 +37,7 @@ class _DashboardState extends State<Dashboard> {
               activeColor: Colors.black,
               inactiveColor: Colors.grey,
               icon: const Icon(LucideIcons.bookA),
-              title: Text(
+              title: const Text(
                 'Assignment',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -50,7 +49,7 @@ class _DashboardState extends State<Dashboard> {
               icon: const Icon(LucideIcons.calendar1),
               activeColor: Colors.black,
               inactiveColor: Colors.grey,
-              title: Text(
+              title: const Text(
                 'Schedule',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -62,7 +61,7 @@ class _DashboardState extends State<Dashboard> {
               icon: const Icon(LucideIcons.settings),
               activeColor: Colors.black,
               inactiveColor: Colors.grey,
-              title: Text(
+              title: const Text(
                 'Settings',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,

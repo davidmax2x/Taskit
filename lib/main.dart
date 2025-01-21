@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Poppins',
       ),
-      home: Login_or_Register(),
+      home: const Login_or_Register(),
     );
   }
 }

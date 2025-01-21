@@ -18,6 +18,7 @@ class _Note_viewState extends State<Note_view> {
               const ListTile(
                 contentPadding: EdgeInsets.all(10),
               );
+              return null;
             })
       ],
     );

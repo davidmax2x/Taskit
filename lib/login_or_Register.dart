@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:taskit/Components/form_tf.dart';
-import 'package:taskit/Dashboard.dart';
 import 'package:taskit/Pages/login.dart';
 import 'package:taskit/Pages/register.dart';
 
 class Login_or_Register extends StatefulWidget {
-  Login_or_Register({Key? key}) : super(key: key);
+  const Login_or_Register({Key? key}) : super(key: key);
 
   @override
   State<Login_or_Register> createState() => _Login_or_RegisterState();

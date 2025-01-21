@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:taskit/Components/form_tf.dart';
-import 'package:taskit/styles/button_styles.dart';
 import 'package:taskit/styles/checkbox_style.dart';
 
 class Register extends StatefulWidget {

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 var authButtonStyle = const ButtonStyle(
-  backgroundColor: MaterialStatePropertyAll(
+  backgroundColor: WidgetStatePropertyAll(
     Colors.black,
   ),
-  shape: MaterialStatePropertyAll(
+  shape: WidgetStatePropertyAll(
     RoundedRectangleBorder(
       borderRadius: BorderRadius.all(
         Radius.circular(10),
       ),
     ),
   ),
-  padding: MaterialStatePropertyAll(
+  padding: WidgetStatePropertyAll(
     EdgeInsets.all(10),
   ),
-  textStyle: MaterialStatePropertyAll(
+  textStyle: WidgetStatePropertyAll(
     TextStyle(
       fontFamily: 'Poppins',
       fontSize: 20,
