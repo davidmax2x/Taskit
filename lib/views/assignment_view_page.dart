@@ -10,8 +10,14 @@ class AssignmentViewPage extends StatefulWidget {
 class _AssignmentViewPageState extends State<AssignmentViewPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Theme.of(context).colorScheme.secondary,
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
+      backgroundColor: Theme.of(context).colorScheme.surface,
+      body: const Center(
         child: Text(
           'AssignmentViewPage is working',
           style: TextStyle(fontSize: 20),

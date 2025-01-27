@@ -26,7 +26,6 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.black,
       body: Padding(

@@ -9,13 +9,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  text_style_editor: ^1.1.1
-  font_awesome_flutter: ^10.8.0
-  dot_navigation_bar: ^1.0.2
   lucide_icons_flutter: ^1.2.5
   gap: ^3.0.1
   bottom_navy_bar: ^6.1.0
   anim_search_bar: ^2.0.3
+  flutter_quill:
+  font_awesome_flutter: ^10.8.0
 
 dev_dependencies:
   flutter_test:

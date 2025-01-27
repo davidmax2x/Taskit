@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:taskit/Components/form_tf.dart';
 import 'package:taskit/styles/checkbox_style.dart';
 
+// ignore: must_be_immutable
 class Register extends StatefulWidget {
   Register({
     Key? key,
@@ -29,7 +30,7 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Form_tf(
+        FormTf(
           controller: widget.fullNameController,
           obscureText: false,
           hint: 'Enter Fullname',
@@ -37,7 +38,7 @@ class _RegisterState extends State<Register> {
         const SizedBox(
           height: 20,
         ),
-        Form_tf(
+        FormTf(
           controller: widget.emailController,
           obscureText: false,
           hint: 'Enter Email',
@@ -45,7 +46,7 @@ class _RegisterState extends State<Register> {
         const SizedBox(
           height: 20,
         ),
-        Form_tf(
+        FormTf(
           controller: widget.passwordController,
           obscureText: !isObscure,
           hint: 'Enter Password',

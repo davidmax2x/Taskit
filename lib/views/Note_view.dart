@@ -1,5 +1,6 @@
 import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:taskit/model/Note.dart';
 
 class NoteView extends StatefulWidget {
   const NoteView({Key? key}) : super(key: key);
@@ -9,6 +10,7 @@ class NoteView extends StatefulWidget {
 }
 
 class _NoteViewState extends State<NoteView> {
+  final List<Note> _notes = [];
   final TextEditingController searchTextController = TextEditingController();
   final TextEditingController titleController = TextEditingController();
 
@@ -16,73 +18,37 @@ class _NoteViewState extends State<NoteView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.surface,
         floatingActionButton: FloatingActionButton(
+          backgroundColor: Theme.of(context).colorScheme.secondary,
           onPressed: () {
-            _showTitleDialog(context);
+            Navigator.pushNamed(context, '/addNote');
           },
           child: const Icon(Icons.add),
         ),
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: AnimSearchBar(
-                width: MediaQuery.of(context).size.width,
-                helpText: 'Search Notes',
-                closeSearchOnSuffixTap: true,
-                textController: searchTextController,
-                onSubmitted: (value) {
-                  print(value);
-                },
-                onSuffixTap: () {
-                  setState(() {
-                    searchTextController.clear();
-                  });
-                },
+        body: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 20,
               ),
-            ),
-            const Expanded(
-              child: Center(
-                child: Text(
-                  'NoteView is working',
-                  style: TextStyle(fontSize: 20),
+              Text(
+                'Your Notes',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
-            ),
-          ],
+              const SizedBox(
+                height: 10,
+              ),
+            ],
+          ),
         ),
       ),
-    );
-  }
-
-  void _showTitleDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text('Enter Note Title'),
-          content: TextField(
-            controller: titleController,
-            decoration: InputDecoration(hintText: 'Note Title'),
-          ),
-          actions: <Widget>[
-            TextButton(
-              child: Text('Cancel'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-            TextButton(
-              child: Text('OK'),
-              onPressed: () {
-                Navigator.of(context).pop();
-                Navigator.pushNamed(context, '/addNote',
-                    arguments: titleController.text);
-              },
-            ),
-          ],
-        );
-      },
     );
   }
 }

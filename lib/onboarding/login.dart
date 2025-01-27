@@ -3,6 +3,7 @@ import 'package:taskit/Components/form_tf.dart';
 import 'package:taskit/Dashboard.dart';
 import 'package:taskit/styles/checkbox_style.dart';
 
+// ignore: must_be_immutable
 class Login extends StatefulWidget {
   Login(
       {Key? key,
@@ -29,7 +30,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Form_tf(
+        FormTf(
           controller: widget.emailController,
           obscureText: false,
           hint: 'Enter Email',
@@ -37,7 +38,7 @@ class _LoginState extends State<Login> {
         const SizedBox(
           height: 20,
         ),
-        Form_tf(
+        FormTf(
           controller: widget.passwordController,
           obscureText: !isObscure,
           hint: 'Enter Password',

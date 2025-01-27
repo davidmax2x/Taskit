@@ -1,7 +1,9 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
-class Form_tf extends StatelessWidget {
-  Form_tf({
+class FormTf extends StatelessWidget {
+  FormTf({
     Key? key,
     required this.controller,
     required this.obscureText,

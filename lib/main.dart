@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taskit/edit_pages/Edit_nootes.dart';
 import 'package:taskit/login_or_Register.dart';
+import 'package:taskit/styles/theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,16 +14,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/login': (context) => const Login_or_Register(),
-        '/addNote':(context)=>  EditNotesPage(),
+        '/addNote': (context) => const EditNootes(),
       },
       title: _title,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        // useMaterial3: false,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        primarySwatch: Colors.blue,
-        fontFamily: 'Poppins',
-      ),
+      themeMode: ThemeMode.system,
+      theme: lightTheme,
+      darkTheme: darkTheme,
       home: const Login_or_Register(),
     );
   }
