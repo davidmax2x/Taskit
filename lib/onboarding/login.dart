@@ -52,7 +52,10 @@ class _LoginState extends State<Login> {
             Checkbox(
               value: isObscure,
               onChanged: (value) => showPassword(value),
-              activeColor: checkBoxStyle['ActiveColor'],
+              activeColor: Theme.of(context).colorScheme.tertiary,
+              checkColor: Theme.of(context).colorScheme.tertiary,
+              fillColor: WidgetStatePropertyAll(
+                  Theme.of(context).colorScheme.secondary),
             ),
             const Text('Show Password'),
           ],
@@ -64,7 +67,7 @@ class _LoginState extends State<Login> {
           height: 70,
           minWidth: 450,
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-          color: Colors.black,
+          color: Theme.of(context).colorScheme.surface,
           onPressed: () {
             setState(() {
               Navigator.of(context).push(MaterialPageRoute(
@@ -74,10 +77,12 @@ class _LoginState extends State<Login> {
           },
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-          child: const Text(
+          child: Text(
             'Login',
             style: TextStyle(
-                color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600),
+                color: Theme.of(context).colorScheme.secondary,
+                fontSize: 20,
+                fontWeight: FontWeight.w600),
           ),
         )
       ],

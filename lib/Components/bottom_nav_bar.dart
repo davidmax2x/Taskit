@@ -3,7 +3,7 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 class BottomNavBar extends StatefulWidget {
-  BottomNavBar(
+  const BottomNavBar(
       {super.key, required this.currentIndex, required this.onTabTapped});
   final int currentIndex;
   final Function(int) onTabTapped;
@@ -36,7 +36,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             ),
           ),
           BottomNavyBarItem(
-            activeColor: Colors.black,
+            activeColor: Theme.of(context).colorScheme.secondary,
             inactiveColor: Theme.of(context).colorScheme.secondary,
             icon: const Icon(LucideIcons.bookA),
             title: const Text(
@@ -48,7 +48,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavyBarItem(
             icon: const Icon(LucideIcons.calendar1),
-            activeColor: Colors.black,
+            activeColor: Theme.of(context).colorScheme.secondary,
             inactiveColor: Theme.of(context).colorScheme.secondary,
             title: const Text(
               'Schedule',
@@ -59,7 +59,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavyBarItem(
             icon: const Icon(LucideIcons.settings),
-            activeColor: Colors.black,
+            activeColor: Theme.of(context).colorScheme.secondary,
             inactiveColor: Theme.of(context).colorScheme.secondary,
             title: const Text(
               'Settings',

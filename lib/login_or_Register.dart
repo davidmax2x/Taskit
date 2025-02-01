@@ -27,7 +27,7 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Form(
@@ -41,7 +41,7 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                   margin: const EdgeInsets.symmetric(horizontal: 30),
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Theme.of(context).colorScheme.tertiary,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
@@ -66,8 +66,10 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                                       const EdgeInsets.symmetric(vertical: 10),
                                   decoration: BoxDecoration(
                                     color: isSwitched
-                                        ? Colors.white
-                                        : Colors.black,
+                                        ? Theme.of(context).colorScheme.tertiary
+                                        : Theme.of(context)
+                                            .colorScheme
+                                            .secondary,
                                     borderRadius: BorderRadius.circular(5),
                                   ),
                                   child: Center(
@@ -75,8 +77,12 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                                       'Login',
                                       style: TextStyle(
                                         color: isSwitched
-                                            ? Colors.black
-                                            : Colors.white,
+                                            ? Theme.of(context)
+                                                .colorScheme
+                                                .secondary
+                                            : Theme.of(context)
+                                                .colorScheme
+                                                .tertiary,
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -125,10 +131,10 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                         // const SizedBox(
                         //   height: 20,
                         // ),
-                        const Divider(
+                        Divider(
                           thickness: 2,
                           // height: 20,
-                          color: Colors.black,
+                          color: Theme.of(context).colorScheme.secondary,
                         ),
                         Container(
                             padding: const EdgeInsets.symmetric(
@@ -147,10 +153,10 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                     ),
                   )),
               const Spacer(),
-              const Text(
+              Text(
                 'Sign In With',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.secondary,
                   fontWeight: FontWeight.w600,
                   fontSize: 15,
                 ),
@@ -165,13 +171,14 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                     padding: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      color: Colors.white,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                     child: IconButton(
                       onPressed: () {},
-                      icon: const FaIcon(
+                      icon: FaIcon(
                         FontAwesomeIcons.google,
                         size: 20,
+                        color: Theme.of(context).colorScheme.surface,
                       ),
                     ),
                   ),
@@ -182,13 +189,14 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                     padding: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      color: Colors.white,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                     child: IconButton(
                       onPressed: () {},
-                      icon: const FaIcon(
+                      icon: FaIcon(
                         FontAwesomeIcons.facebook,
                         size: 20,
+                        color: Theme.of(context).colorScheme.surface,
                       ),
                     ),
                   ),
@@ -199,13 +207,14 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                     padding: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      color: Colors.white,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                     child: IconButton(
                       onPressed: () {},
-                      icon: const FaIcon(
+                      icon: FaIcon(
                         FontAwesomeIcons.phone,
                         size: 20,
+                        color: Theme.of(context).colorScheme.surface,
                       ),
                     ),
                   )

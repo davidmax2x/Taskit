@@ -14,13 +14,15 @@ class EditNootes extends StatelessWidget {
           backgroundColor: Theme.of(context).colorScheme.secondary,
           onPressed: () {
             Navigator.pop(context);
+            
           },
           child: const Icon(Icons.add),
         ),
+        appBar: AppBar(),
         body: SingleChildScrollView(
           controller: controller,
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [

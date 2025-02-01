@@ -1,6 +1,5 @@
-import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:taskit/model/Note.dart';
+import 'package:taskit/Components/noteListTile.dart';
 
 class NoteView extends StatefulWidget {
   const NoteView({Key? key}) : super(key: key);
@@ -10,7 +9,6 @@ class NoteView extends StatefulWidget {
 }
 
 class _NoteViewState extends State<NoteView> {
-  final List<Note> _notes = [];
   final TextEditingController searchTextController = TextEditingController();
   final TextEditingController titleController = TextEditingController();
 
@@ -44,6 +42,17 @@ class _NoteViewState extends State<NoteView> {
               ),
               const SizedBox(
                 height: 10,
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 1,
+                  itemBuilder: (BuildContext context, int index) {
+                    return NoteListTile(
+                        title: 'Hola',
+                        courseCode: 'csc123',
+                        time: DateTime.now().toLocal());
+                  },
+                ),
               ),
             ],
           ),
