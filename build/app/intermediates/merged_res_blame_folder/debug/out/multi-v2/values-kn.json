@@ -4,24 +4,7 @@
             "outputFile": "com.example.taskit.app-mergeDebugResources-25:/values-kn/values-kn.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\b24ed59e1b370e6f8826c64117f68ccc\\transformed\\core-1.13.1\\res\\values-kn\\values-kn.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,256,357,463,564,672,800",
-                        "endColumns": "97,102,100,105,100,107,127,100",
-                        "endOffsets": "148,251,352,458,559,667,795,896"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,13",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,256,357,463,564,672,1231",
-                        "endColumns": "97,102,100,105,100,107,127,100",
-                        "endOffsets": "148,251,352,458,559,667,795,1327"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\00a95c9ed90c4aa5001cf6443b1e4564\\transformed\\browser-1.8.0\\res\\values-kn\\values-kn.xml",
+                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\dfdcbbb9049519bd6ba1d81704adc998\\transformed\\browser-1.8.0\\res\\values-kn\\values-kn.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -35,6 +18,23 @@
                         "startOffsets": "800,914,1014,1130",
                         "endColumns": "113,99,115,100",
                         "endOffsets": "909,1009,1125,1226"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\8610f0586d2c6379de77ed4390cc29ef\\transformed\\core-1.13.1\\res\\values-kn\\values-kn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,256,357,463,564,672,800",
+                        "endColumns": "97,102,100,105,100,107,127,100",
+                        "endOffsets": "148,251,352,458,559,667,795,896"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,13",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,256,357,463,564,672,1231",
+                        "endColumns": "97,102,100,105,100,107,127,100",
+                        "endOffsets": "148,251,352,458,559,667,795,1327"
                     }
                 }
             ]

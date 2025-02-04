@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taskit/Components/form_tf.dart';
 import 'package:taskit/Dashboard.dart';
-import 'package:taskit/styles/checkbox_style.dart';
 
 // ignore: must_be_immutable
 class Login extends StatefulWidget {

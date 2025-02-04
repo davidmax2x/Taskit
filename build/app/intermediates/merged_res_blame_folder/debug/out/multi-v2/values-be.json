@@ -4,24 +4,7 @@
             "outputFile": "com.example.taskit.app-mergeDebugResources-25:/values-be/values-be.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\b24ed59e1b370e6f8826c64117f68ccc\\transformed\\core-1.13.1\\res\\values-be\\values-be.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,355,456,562,665,786",
-                        "endColumns": "97,101,99,100,105,102,120,100",
-                        "endOffsets": "148,250,350,451,557,660,781,882"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,13",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,355,456,562,665,1222",
-                        "endColumns": "97,101,99,100,105,102,120,100",
-                        "endOffsets": "148,250,350,451,557,660,781,1318"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\00a95c9ed90c4aa5001cf6443b1e4564\\transformed\\browser-1.8.0\\res\\values-be\\values-be.xml",
+                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\dfdcbbb9049519bd6ba1d81704adc998\\transformed\\browser-1.8.0\\res\\values-be\\values-be.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -35,6 +18,23 @@
                         "startOffsets": "786,895,1003,1115",
                         "endColumns": "108,107,111,106",
                         "endOffsets": "890,998,1110,1217"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\8610f0586d2c6379de77ed4390cc29ef\\transformed\\core-1.13.1\\res\\values-be\\values-be.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,456,562,665,786",
+                        "endColumns": "97,101,99,100,105,102,120,100",
+                        "endOffsets": "148,250,350,451,557,660,781,882"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,13",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,456,562,665,1222",
+                        "endColumns": "97,101,99,100,105,102,120,100",
+                        "endOffsets": "148,250,350,451,557,660,781,1318"
                     }
                 }
             ]

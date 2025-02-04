@@ -4,24 +4,7 @@
             "outputFile": "com.example.taskit.app-mergeDebugResources-25:/values-gl/values-gl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\b24ed59e1b370e6f8826c64117f68ccc\\transformed\\core-1.13.1\\res\\values-gl\\values-gl.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,154,256,356,454,561,667,783",
-                        "endColumns": "98,101,99,97,106,105,115,100",
-                        "endOffsets": "149,251,351,449,556,662,778,879"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,13",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,154,256,356,454,561,667,1210",
-                        "endColumns": "98,101,99,97,106,105,115,100",
-                        "endOffsets": "149,251,351,449,556,662,778,1306"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\00a95c9ed90c4aa5001cf6443b1e4564\\transformed\\browser-1.8.0\\res\\values-gl\\values-gl.xml",
+                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\dfdcbbb9049519bd6ba1d81704adc998\\transformed\\browser-1.8.0\\res\\values-gl\\values-gl.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -35,6 +18,23 @@
                         "startOffsets": "783,890,992,1104",
                         "endColumns": "106,101,111,105",
                         "endOffsets": "885,987,1099,1205"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MAX\\.gradle\\caches\\8.12\\transforms\\8610f0586d2c6379de77ed4390cc29ef\\transformed\\core-1.13.1\\res\\values-gl\\values-gl.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,154,256,356,454,561,667,783",
+                        "endColumns": "98,101,99,97,106,105,115,100",
+                        "endOffsets": "149,251,351,449,556,662,778,879"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,13",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,154,256,356,454,561,667,1210",
+                        "endColumns": "98,101,99,97,106,105,115,100",
+                        "endOffsets": "149,251,351,449,556,662,778,1306"
                     }
                 }
             ]
