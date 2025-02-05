@@ -8,4 +8,14 @@ class NoteProvider extends ChangeNotifier {
     notes.add(newNote);
     notifyListeners();
   }
+
+  void removeNotes(int index) {
+    notes.removeAt(index);
+    notifyListeners();
+  }
+
+  void updateNote(Note updatedNote, int index) {
+    notes[index] = updatedNote;
+    notifyListeners();
+  }
 }

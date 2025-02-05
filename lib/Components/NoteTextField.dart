@@ -4,11 +4,14 @@ class NoteTextField extends StatelessWidget {
   const NoteTextField({
     super.key,
     required this.hintText,
+    required this.controller,
   });
   final String hintText;
+  final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       textCapitalization: TextCapitalization.words,
       showCursor: true,
       cursorColor: Theme.of(context).colorScheme.secondary,

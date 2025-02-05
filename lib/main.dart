@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:taskit/Edit%20pages/Edit_nootes.dart';
 import 'package:taskit/Providers/NoteProvider.dart';
 import 'package:taskit/login_or_Register.dart';
 import 'package:taskit/styles/theme.dart';
+
+import 'Edit pages/edit_nootes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -16,11 +17,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [Provider(create: (context) => NoteProvider())],
+      providers:[
+        ChangeNotifierProvider(create: (context) => NoteProvider()),
+      ],
       child: MaterialApp(
         routes: {
           '/login': (context) => const Login_or_Register(),
-          '/addNote': (context) => const EditNootes(),
+          '/addNote': (context) => const EditNotes(),
+
         },
         title: _title,
         debugShowCheckedModeBanner: false,

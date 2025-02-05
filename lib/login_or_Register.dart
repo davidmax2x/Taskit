@@ -107,8 +107,12 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                                       const EdgeInsets.symmetric(vertical: 10),
                                   decoration: BoxDecoration(
                                     color: isSwitched
-                                        ? Colors.black
-                                        : Colors.white,
+                                        ? Theme.of(context)
+                                            .colorScheme
+                                            .secondary
+                                        : Theme.of(context)
+                                            .colorScheme
+                                            .tertiary,
                                     borderRadius: BorderRadius.circular(5),
                                   ),
                                   child: Center(
@@ -118,8 +122,12 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
                                         color: isSwitched
-                                            ? Colors.white
-                                            : Colors.black,
+                                            ? Theme.of(context)
+                                                .colorScheme
+                                                .tertiary
+                                            : Theme.of(context)
+                                                .colorScheme
+                                                .secondary,
                                       ),
                                     ),
                                   ),

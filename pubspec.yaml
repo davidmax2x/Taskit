@@ -7,20 +7,20 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
+  
+  bottom_navy_bar: ^6.1.0
   flutter:
     sdk: flutter
-  lucide_icons_flutter: ^1.2.5
-  gap: ^3.0.1
-  bottom_navy_bar: ^6.1.0
-  anim_search_bar: ^2.0.3
-  flutter_quill:
+  flutter_slidable: ^4.0.0
   font_awesome_flutter: ^10.8.0
+  gap: ^3.0.1
+  lucide_icons_flutter: ^1.2.5
   provider: ^6.1.2
 
 dev_dependencies:
+  flutter_lints: ^2.0.2
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.2
 
 flutter:
   uses-material-design: true

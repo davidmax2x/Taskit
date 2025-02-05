@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:provider/provider.dart';
 import 'package:taskit/Components/noteListTile.dart';
+import 'package:taskit/Components/searchbar.dart';
+import 'package:taskit/Providers/NoteProvider.dart';
 
 class NoteView extends StatefulWidget {
   const NoteView({Key? key}) : super(key: key);
@@ -14,6 +18,7 @@ class _NoteViewState extends State<NoteView> {
 
   @override
   Widget build(BuildContext context) {
+    List notes = context.watch<NoteProvider>().notes;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.surface,
@@ -43,14 +48,43 @@ class _NoteViewState extends State<NoteView> {
               const SizedBox(
                 height: 10,
               ),
+              const Searchbar(),
+              const SizedBox(
+                height: 20,
+              ),
               Expanded(
                 child: ListView.builder(
-                  itemCount: 1,
+                  itemCount: notes.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return NoteListTile(
-                        title: 'Hola',
-                        courseCode: 'csc123',
-                        time: DateTime.now().toLocal());
+                    return Slidable(
+                      endActionPane: ActionPane(
+                        motion: const StretchMotion(),
+                        children: [
+                          SlidableAction(
+                            onPressed: (BuildContext context) {
+                              context.read<NoteProvider>().removeNotes(index);
+                            },
+                            icon: Icons.delete,
+                            backgroundColor:
+                                Theme.of(context).colorScheme.secondary,
+                          ),
+                        ],
+                      ),
+                      child: GestureDetector(
+                        onTap: () {
+                          debugPrint('Note tapped: ${notes[index].title}');
+                          Navigator.pushNamed(
+                            context,
+                            '/addNote',
+                            arguments: notes[index],
+                          );
+                        },
+                        child: NoteListTile(
+                            title: notes[index].title,
+                            courseCode: notes[index].courseCode,
+                            time: DateTime.now().toLocal()),
+                      ),
+                    );
                   },
                 ),
               ),
