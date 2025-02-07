@@ -75,14 +75,14 @@ class _RegisterState extends State<Register> {
           height: 70,
           minWidth: 450,
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-          color: Theme.of(context).colorScheme.surface,
+          color: Theme.of(context).colorScheme.secondary,
           onPressed: () {},
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           child: Text(
             'Register',
             style: TextStyle(
-                color: Theme.of(context).colorScheme.secondary,
+                color: Theme.of(context).colorScheme.primary,
                 fontSize: 20,
                 fontWeight: FontWeight.w600),
           ),

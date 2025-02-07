@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:taskit/Providers/NoteProvider.dart';
+import 'package:taskit/Providers/schedule_provider.dart';
 import 'package:taskit/login_or_Register.dart';
 import 'package:taskit/styles/theme.dart';
 
 import 'Edit pages/edit_nootes.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(
+      MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (context) => NoteProvider()),
+          ChangeNotifierProvider(create: (_) => ScheduleProvider()),
+        ],
+        child: const MyApp(),
+      ),
+    );
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,23 +25,17 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers:[
-        ChangeNotifierProvider(create: (context) => NoteProvider()),
-      ],
-      child: MaterialApp(
-        routes: {
-          '/login': (context) => const Login_or_Register(),
-          '/addNote': (context) => const EditNotes(),
-
-        },
-        title: _title,
-        debugShowCheckedModeBanner: false,
-        themeMode: ThemeMode.system,
-        theme: lightTheme,
-        darkTheme: darkTheme,
-        home: const Login_or_Register(),
-      ),
+    return MaterialApp(
+      routes: {
+        '/login': (context) => const Login_or_Register(),
+        '/addNote': (context) => const EditNotes(),
+      },
+      title: _title,
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.system,
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      home: const Login_or_Register(),
     );
   }
 }

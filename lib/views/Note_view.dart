@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:provider/provider.dart';
 import 'package:taskit/Components/noteListTile.dart';
-import 'package:taskit/Components/searchbar.dart';
+
 import 'package:taskit/Providers/NoteProvider.dart';
 
 class NoteView extends StatefulWidget {
@@ -18,7 +18,7 @@ class _NoteViewState extends State<NoteView> {
 
   @override
   Widget build(BuildContext context) {
-    List notes = context.watch<NoteProvider>().notes;
+    List notes = context.watch<NoteProvider>().filteredNotes;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.surface,
@@ -48,7 +48,29 @@ class _NoteViewState extends State<NoteView> {
               const SizedBox(
                 height: 10,
               ),
-              const Searchbar(),
+              TextField(
+                controller: searchTextController,
+                decoration: InputDecoration(
+                  hintText: 'Search notes...',
+                  prefixIcon: const Icon(Icons.search),
+                  suffixIcon: searchTextController.text.isNotEmpty
+                      ? IconButton(
+                          icon: const Icon(Icons.clear),
+                          onPressed: () {
+                            searchTextController.clear();
+                            context.read<NoteProvider>().updateSearchQuery('');
+                          },
+                        )
+                      : null,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                onChanged: (value) {
+                  setState(() {}); // Rebuild to show/hide clear button
+                  context.read<NoteProvider>().updateSearchQuery(value);
+                },
+              ),
               const SizedBox(
                 height: 20,
               ),
@@ -62,7 +84,7 @@ class _NoteViewState extends State<NoteView> {
                         children: [
                           SlidableAction(
                             onPressed: (BuildContext context) {
-                              context.read<NoteProvider>().removeNotes(index);
+                              context.read<NoteProvider>().removeNote(index);
                             },
                             icon: Icons.delete,
                             backgroundColor:
@@ -72,12 +94,14 @@ class _NoteViewState extends State<NoteView> {
                       ),
                       child: GestureDetector(
                         onTap: () {
-                          debugPrint('Note tapped: ${notes[index].title}');
-                          Navigator.pushNamed(
-                            context,
-                            '/addNote',
-                            arguments: notes[index],
-                          );
+                          setState(() {
+                            debugPrint('Note tapped: ${notes[index].title}');
+                            Navigator.pushNamed(
+                              context,
+                              '/addNote',
+                              arguments: notes[index],
+                            );
+                          });
                         },
                         child: NoteListTile(
                             title: notes[index].title,

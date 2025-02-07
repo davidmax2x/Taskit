@@ -4,18 +4,18 @@ ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   hintColor: const Color.fromARGB(255, 44, 44, 44),
   colorScheme: const ColorScheme.light(
-    surface: Color.fromARGB(255, 240, 236, 236),
-    primary: Color.fromARGB(255, 44, 44, 44),
-    secondary: Colors.black,
-    tertiary: Colors.white,
+    surface: Color.fromRGBO(234, 224, 213, 1),
+    primary: Color.fromRGBO(233, 236, 239, 1),
+    secondary: Color.fromRGBO(52, 58, 64, 1),
+    tertiary: Color.fromRGBO(248, 249, 250, 1),
   ),
 );
 
 ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
-  colorScheme: ColorScheme.dark(
-      surface: const Color.fromARGB(255, 19, 19, 19),
-      primary: Colors.grey.shade900,
-      secondary: Colors.white,
-      tertiary: Colors.black),
+  colorScheme: const ColorScheme.dark(
+      surface: Color.fromRGBO(10, 9, 8, 1),
+      primary: Color.fromRGBO(94, 80, 63, 1),
+      secondary: Color.fromRGBO(234, 224, 213, 1),
+      tertiary: Color.fromRGBO(34, 51, 59, 1)),
 );

@@ -51,7 +51,7 @@ class FormTf extends StatelessWidget {
           ),
         ),
         filled: true,
-        fillColor: Theme.of(context).colorScheme.surface,
+        fillColor: Theme.of(context).colorScheme.primary,
       ),
     );
   }
