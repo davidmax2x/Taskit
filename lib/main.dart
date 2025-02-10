@@ -5,7 +5,8 @@ import 'package:taskit/Providers/schedule_provider.dart';
 import 'package:taskit/login_or_Register.dart';
 import 'package:taskit/styles/theme.dart';
 
-import 'Edit pages/edit_nootes.dart';
+import 'Edit pages/AddNote.dart';
+import 'Edit pages/EditNote.dart';
 
 void main() => runApp(
       MultiProvider(
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/login': (context) => const Login_or_Register(),
-        '/addNote': (context) => const EditNotes(),
+        '/addNote': (context) => const Addnote(),
+        '/editNote': (context) => const EditNote(),
       },
       title: _title,
       debugShowCheckedModeBanner: false,

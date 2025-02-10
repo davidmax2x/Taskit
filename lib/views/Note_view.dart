@@ -35,24 +35,35 @@ class _NoteViewState extends State<NoteView> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
-              Text(
-                'Your Notes',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Theme.of(context).colorScheme.secondary,
-                  fontWeight: FontWeight.w700,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Notes',
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
               TextField(
                 controller: searchTextController,
+                cursorColor: Theme.of(context).colorScheme.secondary,
                 decoration: InputDecoration(
                   hintText: 'Search notes...',
                   prefixIcon: const Icon(Icons.search),
+                  filled: true,
+                  fillColor: Theme.of(context).colorScheme.tertiary,
                   suffixIcon: searchTextController.text.isNotEmpty
                       ? IconButton(
                           icon: const Icon(Icons.clear),
@@ -86,7 +97,9 @@ class _NoteViewState extends State<NoteView> {
                             onPressed: (BuildContext context) {
                               context.read<NoteProvider>().removeNote(index);
                             },
+                            borderRadius: BorderRadius.circular(5),
                             icon: Icons.delete,
+                            spacing: 0,
                             backgroundColor:
                                 Theme.of(context).colorScheme.secondary,
                           ),

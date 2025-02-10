@@ -14,6 +14,7 @@ dependencies:
   flutter_slidable: ^4.0.0
   font_awesome_flutter: ^10.8.0
   gap: ^3.0.1
+  horizontal_calendar: ^1.1.2
   lucide_icons_flutter: ^1.2.5
   provider: ^6.1.2
 

@@ -1,23 +1,29 @@
 import 'package:flutter/material.dart';
-import '../models/schedule.dart';
+import '../model/schedule.dart';
 
 class ScheduleProvider with ChangeNotifier {
-  final List<Schedule> _schedules = [];
-
-  List<Schedule> get schedules => List.unmodifiable(_schedules);
+  final List<Schedule> schedules = [];
+  String _searchQuery = '';
 
   void addSchedule(Schedule schedule) {
-    _schedules.add(schedule);
+    schedules.add(schedule);
     notifyListeners();
   }
 
   void updateSchedule(int index, Schedule schedule) {
-    _schedules[index] = schedule;
+    schedules[index] = schedule;
     notifyListeners();
   }
 
   void removeSchedule(int index) {
-    _schedules.removeAt(index);
+    schedules.removeAt(index);
     notifyListeners();
   }
+
+  void updateSearchQuery(String query) {
+    _searchQuery = query;
+    notifyListeners();
+  }
+
+  String get searchQuery => _searchQuery;
 }
