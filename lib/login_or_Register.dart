@@ -36,12 +36,26 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Spacer(),
+                    SizedBox(
+                      height: 200,
+                      width: 100,
+                      child: Center(
+                        child: Image.asset(
+                          'assets/Taskit.png',
+                          errorBuilder: (context, error, stackTrace) {
+                            return Text(
+                              'Image not found',
+                              style: TextStyle(color: Theme.of(context).colorScheme.secondary),
+                            ); // Placeholder text
+                          },
+                        ),
+                      ),
+                    ),
                     Container(
                         margin: const EdgeInsets.symmetric(horizontal: 30),
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.tertiary,
+                          color: Theme.of(context).colorScheme.surface,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Center(
@@ -66,12 +80,8 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                                             vertical: 10),
                                         decoration: BoxDecoration(
                                           color: isSwitched
-                                              ? Theme.of(context)
-                                                  .colorScheme
-                                                  .tertiary
-                                              : Theme.of(context)
-                                                  .colorScheme
-                                                  .secondary,
+                                              ? Theme.of(context).colorScheme.surface
+                                              : Theme.of(context).colorScheme.primary,
                                           borderRadius:
                                               BorderRadius.circular(5),
                                         ),
@@ -80,12 +90,8 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                                             'Login',
                                             style: TextStyle(
                                               color: isSwitched
-                                                  ? Theme.of(context)
-                                                      .colorScheme
-                                                      .secondary
-                                                  : Theme.of(context)
-                                                      .colorScheme
-                                                      .tertiary,
+                                                  ? Theme.of(context).colorScheme.onSurface
+                                                  : Theme.of(context).colorScheme.onPrimary,
                                               fontSize: 20,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -110,12 +116,8 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                                             vertical: 10),
                                         decoration: BoxDecoration(
                                           color: isSwitched
-                                              ? Theme.of(context)
-                                                  .colorScheme
-                                                  .secondary
-                                              : Theme.of(context)
-                                                  .colorScheme
-                                                  .tertiary,
+                                              ? Theme.of(context).colorScheme.primary
+                                              : Theme.of(context).colorScheme.surface,
                                           borderRadius:
                                               BorderRadius.circular(5),
                                         ),
@@ -126,12 +128,8 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                                               fontSize: 20,
                                               fontWeight: FontWeight.w600,
                                               color: isSwitched
-                                                  ? Theme.of(context)
-                                                      .colorScheme
-                                                      .tertiary
-                                                  : Theme.of(context)
-                                                      .colorScheme
-                                                      .secondary,
+                                                  ? Theme.of(context).colorScheme.onPrimary
+                                                  : Theme.of(context).colorScheme.onSurface,
                                             ),
                                           ),
                                         ),
@@ -145,7 +143,7 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                               // ),
                               Divider(
                                 thickness: 2,
-                                // height: 20,
+                                height: 20,
                                 color: Theme.of(context).colorScheme.secondary,
                               ),
                               Container(
@@ -167,7 +165,7 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                             ],
                           ),
                         )),
-                    const Spacer(),
+                    // const Spacer(),
                     const SizedBox(
                       height: 20,
                     ),
@@ -175,84 +173,50 @@ class _Login_or_RegisterState extends State<Login_or_Register> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         // signin with phone number
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 10,
-                            vertical: 5,
-                          ),
-                          width: MediaQuery.of(context).size.width * 2.5 / 3,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Theme.of(context).colorScheme.secondary,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              IconButton(
-                                onPressed: () {},
-                                icon: FaIcon(
-                                  FontAwesomeIcons.google,
-                                  size: 20,
-                                  color: Theme.of(context).colorScheme.surface,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                'Sign In With Google',
-                                style: TextStyle(
-                                    fontSize: 15,
+                        GestureDetector(
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 5,
+                            ),
+                            width: MediaQuery.of(context).size.width * 2.5 / 3,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Theme.of(context).colorScheme.secondary,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                IconButton(
+                                  onPressed: () {},
+                                  icon: FaIcon(
+                                    FontAwesomeIcons.google,
+                                    size: 20,
                                     color:
-                                        Theme.of(context).colorScheme.tertiary,
-                                    fontWeight: FontWeight.w700),
-                              ),
-                            ],
+                                        Theme.of(context).colorScheme.surface,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  'Sign In With Google',
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .tertiary,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         const SizedBox(
                           height: 15,
                         ),
 
-                        // signin with phone number
-                        GestureDetector(
-                          child: Container(
-                              width: MediaQuery.of(context).size.width * 2.5 / 3,
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 10,
-                                vertical: 5,
-                              ),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Theme.of(context).colorScheme.secondary,
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  IconButton(
-                                    onPressed: () {},
-                                    icon: FaIcon(
-                                      FontAwesomeIcons.phone,
-                                      size: 20,
-                                      color:
-                                          Theme.of(context).colorScheme.surface,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    'Sign In With Phone Number',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .tertiary,
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                ],
-                              )),
-                        ),
                         const SizedBox(
                           height: 20,
                         )

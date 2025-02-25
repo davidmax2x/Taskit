@@ -15,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavyBar(
-        backgroundColor: Theme.of(context).colorScheme.tertiary,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         selectedIndex: widget.currentIndex,
         containerHeight: 60,
         curve: Curves.ease,
@@ -25,49 +25,54 @@ class _BottomNavBarState extends State<BottomNavBar> {
         onItemSelected: widget.onTabTapped,
         items: [
           BottomNavyBarItem(
-            activeColor: Theme.of(context).colorScheme.secondary,
-            inactiveColor: Theme.of(context).colorScheme.secondary,
+            activeColor: Theme.of(context).colorScheme.primary,
+            inactiveColor: Theme.of(context).colorScheme.onSurface,
             icon: const Icon(LucideIcons.notepadText),
-            title: const Text(
+            title: Text(
               'Notes',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.primary,
               ),
             ),
           ),
           BottomNavyBarItem(
-            activeColor: Theme.of(context).colorScheme.secondary,
-            inactiveColor: Theme.of(context).colorScheme.secondary,
+            activeColor: Theme.of(context).colorScheme.primary,
+            inactiveColor: Theme.of(context).colorScheme.onSurface,
             icon: const Icon(LucideIcons.bookA),
-            title: const Text(
-              'Class Tasks',
+            title: Text(
+              'Assignment',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.primary,
               ),
             ),
           ),
           BottomNavyBarItem(
             icon: const Icon(LucideIcons.calendar1),
-            activeColor: Theme.of(context).colorScheme.secondary,
-            inactiveColor: Theme.of(context).colorScheme.secondary,
-            title: const Text(
+            activeColor: Theme.of(context).colorScheme.primary,
+            inactiveColor: Theme.of(context).colorScheme.onSurface,
+            title: Text(
               'Schedule',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.primary,
               ),
             ),
           ),
           BottomNavyBarItem(
             icon: const Icon(LucideIcons.settings),
-            activeColor: Theme.of(context).colorScheme.secondary,
-            inactiveColor: Theme.of(context).colorScheme.secondary,
-            title: const Text(
+            activeColor: Theme.of(context).colorScheme.primary,
+            inactiveColor: Theme.of(context).colorScheme.onSurface,
+            title: Text(
               'Settings',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.primary,
               ),
             ),
           ),
         ]);
   }
 }
+
